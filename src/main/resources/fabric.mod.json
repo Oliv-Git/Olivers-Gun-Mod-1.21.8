@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "olivers-gun-mod",
+	"version": "${version}",
+	"name": "Oliver's gun mod",
+	"description": "A fabric mod for 1.21.8 to add guns to minecraft!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://oliver.net/",
+		"sources": "https://github.com/FabricMC/fabric-gun-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/olivers-gun-mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.oliver.oliversgunmod.OliversGunMod"
+		],
+		"fabric-datagen": [
+			"net.oliver.oliversgunmod.OliversGunModDataGenerator"
+		],
+		"Client": [
+			"net.oliver.oliversgunmod.GunModClient"
+		]
+	},
+	"mixins": [
+		"olivers-gun-mod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.17.2",
+		"minecraft": "~1.21.8",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
